@@ -1,1 +1,1 @@
-My first readme on alx-higher_level_programming
+Starting if/else, loops, functions in pyton
