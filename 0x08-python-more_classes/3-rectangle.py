@@ -44,7 +44,7 @@ class Rectangle:
         """public instance method that returns the area of the object"""
         rectangle_area = self.height * self.width
         return rectangle_area
-    
+
     def perimeter(self):
         """public instance method that returns the perimeter of the object"""
         if (self.__height == 0) or (self.width == 0):
@@ -63,7 +63,8 @@ class Rectangle:
         else:
             rect = []
             for i in range(self.__height):
-                [rect.append("#") for j in range(self.__width)]
+                for j in range(self.__width):
+                    rect.append("#)
                 if i != self.height -1:
                     rect.append("\n")
             return ("".join(rect))
