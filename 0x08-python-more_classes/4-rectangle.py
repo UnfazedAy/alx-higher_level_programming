@@ -1,4 +1,4 @@
-#!/usr/bin/usr/python3
+#!/usr/bin/python3
 """class Rectangle with the Area and Perimeter"""
 
 
@@ -69,5 +69,7 @@ class Rectangle:
         return ("".join(rect))
 
     def __repr__(self):
-        """Returns a representation of printable string of thr Rectangle"""
-        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+        """Tye rectangle's string representation"""
+        rectangle = "Rectangle(" + str(self.__width)
+        rectangle += ", " + str(self.__height) + ")"
+        return (rectangle)
