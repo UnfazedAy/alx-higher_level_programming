@@ -20,8 +20,9 @@ class Rectangle {
 
   // rotates the width for the height and vice-versa
   rotate () {
+    const change = this.width;
     this.width = this.height;
-    this.height = this.width;
+    this.height = change;
   }
 
   // multiplies the sides by 2
