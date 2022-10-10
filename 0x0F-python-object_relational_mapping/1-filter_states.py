@@ -4,7 +4,7 @@ import MySQLdb
 from sys import argv
 
 
-def filter__names():
+def filter_names():
     """Takes arguments argv to list from database
     Only lists with states that start with  N
         argv[1]: mysql username
@@ -23,7 +23,7 @@ def filter__names():
     cur = db.cursor()
 
     # Executing db queries
-    cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id")
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
 
     # fetches all the rows of a query result
     query_rows = cur.fetchall()
@@ -35,5 +35,6 @@ def filter__names():
     cur.close()
     db.close()
 
+
 if __name__ == '__main__':
-    filter__names()
+    filter_names()
