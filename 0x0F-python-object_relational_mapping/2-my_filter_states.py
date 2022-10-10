@@ -4,12 +4,13 @@ import MySQLdb
 from sys import argv
 
 
-def filter__names():
+def filter_names():
     """Takes arguments argv to list from database
     Only lists with states that start with  N
         argv[1]: mysql username
         argv[2]: mysql password
         argv[3]: database name
+        argv[4]: name serached
     """
     db = MySQLdb.connect(host="localhost",
                          port=3306,
