@@ -4,7 +4,7 @@ import MySQLdb
 from sys import argv
 
 
-def get__db():
+def get_db():
     """Takes arguments argv to list from database
 
     Arguments:
@@ -17,24 +17,24 @@ def get__db():
                          user=argv[1],
                          passwd=argv[2],
                          db=argv[3],
-                         charset="utf8"
+                         charset="utf8",
                          )
-
-    # Getting a cursor in MySQLdb python
+    # Getting cursor in MySQLdb python
     cur = db.cursor()
 
-    # Executing db queries
+    # Execute db queries
     cur.execute("SELECT * FROM states ORDER BY id ASC")
 
-    # fetches all the rows of a query result
+    # Fetch all rows of query result
     query_rows = cur.fetchall()
 
-    # Printing the result one in one
+    # Printing the result one by one
     for row in query_rows:
         print(row)
 
     cur.close()
     db.close()
 
-if __name__ == '__main__':
-    get__db()
+
+if __name__ == "__main__":
+    get_db()
