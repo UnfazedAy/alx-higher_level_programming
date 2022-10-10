@@ -10,33 +10,33 @@ def filter_names():
         argv[1]: mysql username
         argv[2]: mysql password
         argv[3]: database name
-        argv[4]: name serached
+        argv[4]: name searched
     """
     db = MySQLdb.connect(host="localhost",
                          port=3306,
                          user=argv[1],
                          passwd=argv[2],
                          db=argv[3],
-                         charset="utf8",
+                         charset="utf8"
                          )
 
     # Getting a cursor in MySQLdb python
     cur = db.cursor()
 
     # Executing db queries
-    cur.execute("SELECT * FROM states WHERE BINARY name='{:s}'\
-                ORDER BY id ASC".format(argv[4]))
+    cur.execute(f"SELECT * FROM states WHERE name = '{argv[4]}'\
+                ORDER BY id ASC")
 
     # fetches all the rows of a query result
-    query_rows = cur.fetchall()
+    query_row = cur.fetchall()
 
     # Printing the result one in one
-    for row in query_rows:
+    for row in query_row:
         print(row)
 
     cur.close()
     db.close()
 
 
-if __name__ == '__main__':
-    filter__names()
+if __name__ == "__main__":
+    filter_names()
