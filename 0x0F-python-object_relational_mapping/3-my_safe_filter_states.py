@@ -4,7 +4,7 @@ import MySQLdb
 from sys import argv
 
 
-def filter__names():
+def filter_names():
     """Takes arguments argv to list from database
     Only lists with states that start with  N
         argv[1]: mysql username
@@ -42,4 +42,4 @@ def filter__names():
 
 
 if __name__ == '__main__':
-    filter__names()
+    filter_names()
