@@ -24,7 +24,7 @@ def filter_names():
     cur = db.cursor()
 
     # Executing db queries
-    cur.execute("SELECT * FROM states WHERE name = '{}'\
+    cur.execute("SELECT * FROM states WHERE name = '{:s}'\
                 ORDER BY id ASC".format(argv[4]))
 
     # fetches all the rows of a query result
