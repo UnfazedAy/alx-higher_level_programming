@@ -12,4 +12,4 @@ import requests
 if __name__ == '__main__':
     url = argv[1]
     my_req = requests.get(url)
-    print(my_req.header.get('X-Request-Id'))
+    print(my_req.headers.get('X-Request-Id'))
