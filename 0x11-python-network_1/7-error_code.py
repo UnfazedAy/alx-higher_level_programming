@@ -8,11 +8,11 @@ print: Error code: followed by the value of the HTTP status code
 
 
 import requests
-import sys
+from import argv
 if __name__ = '__main__':
     url = argv[1]
     req = requests.get(url)
     if req.status_code >= 400:
-        print(f'Error code: {res.status_code}')
+        print(f'Error code: {req.status_code)')
     else:
         print(req.text)
