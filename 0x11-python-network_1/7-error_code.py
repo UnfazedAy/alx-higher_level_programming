@@ -8,7 +8,7 @@ print: Error code: followed by the value of the HTTP status code
 
 
 import requests
-from import argv
+from sys import argv
 if __name__ = '__main__':
     url = argv[1]
     req = requests.get(url)
