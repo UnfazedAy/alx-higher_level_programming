@@ -1,3 +1,5 @@
+#!/usr/bin/node
+// A script that reads a file and accepts argument as the filepath
 const fs = require('fs');
 const { argv } = require('process');
 let filePath = argv[2];
