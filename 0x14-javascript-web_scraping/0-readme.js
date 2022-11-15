@@ -2,7 +2,7 @@
 // A script that reads a file and accepts argument as the filepath
 const fs = require('fs');
 const { argv } = require('process');
-let filePath = argv[2];
+const filePath = argv[2];
 
 fs.readFile(filePath, 'utf-8', (err, data) => {
   if (err) {
