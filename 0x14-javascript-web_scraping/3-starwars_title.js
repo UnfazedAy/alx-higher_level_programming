@@ -8,7 +8,7 @@ https://swapi-api.hbtn.io/api/films/:id
 **/
 const { argv } = require('process');
 const request = require('request');
-const apiUrl = "https://swapi-api.hbtn.io/api/films/";
+const apiUrl = 'https://swapi-api.hbtn.io/api/films/';
 const episodeNum = argv[2];
 
 request(apiUrl + episodeNum, (err, response, body) => {
@@ -18,6 +18,6 @@ request(apiUrl + episodeNum, (err, response, body) => {
     const json = JSON.parse(body);
     console.log(json);
   } else {
-    console.log("status: ", response.statusCode);
+    console.log('status: ', response.statusCode);
   }
 });
