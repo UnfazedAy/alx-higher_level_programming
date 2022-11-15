@@ -15,9 +15,9 @@ request(apiUrl + episodeNum, (err, response, body) => {
   if (err) {
     console.log(err);
   } else if (response.statusCode === 200) {
-    const json = JSON.parse(body);
-    console.log(json);
+    const Json = JSON.parse(body);
+    console.log(Json.title);
   } else {
-    console.log('status: ', response.statusCode);
+    console.log('Status: ', response.statusCode);
   }
 });
